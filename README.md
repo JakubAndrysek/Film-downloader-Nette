@@ -1,6 +1,10 @@
-Nette Web Project
+Film-downloader-Nette
 =================
+You can test this app on my web page [film.kubaandrysek.cz](http://film.kubaandrysek.cz) 
 
+
+Nette
+======
 This is a simple, skeleton application using the [Nette](https://nette.org). This is meant to
 be used as a starting point for your new projects.
 
