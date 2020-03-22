@@ -1,0 +1,24 @@
+{block content}
+
+<div class="jumbotron text-center" id="outer">
+    <h2 n:block="name2">{$urlcode['title']}</h2>
+    <br>
+    <h5><a n:href="Homepage:default">← Back to home page</a></h5>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <video id="video" class="video-js vjs-16-9 vjs-big-play-centered vjs-sublime-skin" preload="auto" controls="" poster="http://online.sktorrent.eu/media/videos/tmb/{$urlcode['urlCode']}/default.jpg" data-setup="{}">
+        <source src="http://online{$urlcode['videoCode']}.sktorrent.eu/media/videos//h264/{$urlcode['urlCode']}_720p.mp4" type="video/mp4" label="720p" res="720">
+        <source src="http://online{$urlcode['videoCode']}.sktorrent.eu/media/videos//h264/{$urlcode['urlCode']}_480p.mp4" type="video/mp4" label="480p" res="480">
+        <source src="http://online{$urlcode['videoCode']}.sktorrent.eu/media/videos//h264/{$urlcode['urlCode']}_360p.mp4" type="video/mp4" label="360p" res="360">
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+
+</div> 
+
+
