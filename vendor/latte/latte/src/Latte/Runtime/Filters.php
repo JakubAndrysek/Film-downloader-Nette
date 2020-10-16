@@ -39,12 +39,12 @@ class Filters
 
 	/**
 	 * Escapes string for use inside HTML text.
-	 * @param  mixed  $s  plain text or HtmlString
+	 * @param  mixed  $s  plain text or HtmlStringable
 	 * @return string HTML
 	 */
 	public static function escapeHtmlText($s): string
 	{
-		return $s instanceof HtmlString || $s instanceof \Nette\Utils\IHtmlString
+		return $s instanceof HtmlStringable || $s instanceof \Nette\Utils\IHtmlString
 			? $s->__toString(true)
 			: htmlspecialchars((string) $s, ENT_NOQUOTES | ENT_SUBSTITUTE, 'UTF-8');
 	}
@@ -57,7 +57,7 @@ class Filters
 	 */
 	public static function escapeHtmlAttr($s, bool $double = true): string
 	{
-		$double = $double && $s instanceof HtmlString ? false : $double;
+		$double = $double && $s instanceof HtmlStringable ? false : $double;
 		$s = (string) $s;
 		if (strpos($s, '`') !== false && strpbrk($s, ' <>"\'') === false) {
 			$s .= ' '; // protection against innerHTML mXSS vulnerability nette/nette#1496
@@ -158,16 +158,16 @@ class Filters
 	 */
 	public static function escapeJs($s): string
 	{
-		if ($s instanceof HtmlString || $s instanceof \Nette\Utils\IHtmlString) {
+		if ($s instanceof HtmlStringable || $s instanceof \Nette\Utils\IHtmlString) {
 			$s = $s->__toString(true);
 		}
 
-		$json = json_encode($s, JSON_UNESCAPED_UNICODE);
+		$json = json_encode($s, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 		if ($error = json_last_error()) {
 			throw new \RuntimeException(json_last_error_msg(), $error);
 		}
 
-		return str_replace([']]>', '<!'], [']]\x3E', '\x3C!'], $json);
+		return str_replace([']]>', '<!', '</'], [']]\u003E', '\u003C!', '<\/'], $json);
 	}
 
 

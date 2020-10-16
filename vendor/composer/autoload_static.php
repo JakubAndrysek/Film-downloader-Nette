@@ -8,7 +8,6 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
 {
     public static $files = array (
         '19a7e2c3b1d506dcdc1b60aab8e102e4' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/shortcuts.php',
-        'afdda9f94b76f77a7518e02eee753cc9' => __DIR__ . '/..' . '/nette/mail/src/compatibility.php',
     );
 
     public static $classMap = array (
@@ -32,20 +31,22 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Latte\\Parser' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Parser.php',
         'Latte\\PhpHelpers' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/PhpHelpers.php',
         'Latte\\PhpWriter' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/PhpWriter.php',
+        'Latte\\Policy' => __DIR__ . '/..' . '/latte/latte/src/Latte/Policy.php',
         'Latte\\RegexpException' => __DIR__ . '/..' . '/latte/latte/src/Latte/exceptions.php',
-        'Latte\\RuntimeException' => __DIR__ . '/..' . '/latte/latte/src/Latte/exceptions.php',
         'Latte\\Runtime\\Blueprint' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/Blueprint.php',
         'Latte\\Runtime\\CachingIterator' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/CachingIterator.php',
         'Latte\\Runtime\\FilterExecutor' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/FilterExecutor.php',
         'Latte\\Runtime\\FilterInfo' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/FilterInfo.php',
         'Latte\\Runtime\\Filters' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/Filters.php',
         'Latte\\Runtime\\Html' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/Html.php',
-        'Latte\\Runtime\\HtmlString' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/HtmlString.php',
+        'Latte\\Runtime\\HtmlStringable' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/HtmlStringable.php',
         'Latte\\Runtime\\IHtmlString' => __DIR__ . '/..' . '/latte/latte/src/compatibility.php',
         'Latte\\Runtime\\ISnippetBridge' => __DIR__ . '/..' . '/latte/latte/src/compatibility.php',
         'Latte\\Runtime\\SnippetBridge' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/SnippetBridge.php',
         'Latte\\Runtime\\SnippetDriver' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/SnippetDriver.php',
         'Latte\\Runtime\\Template' => __DIR__ . '/..' . '/latte/latte/src/Latte/Runtime/Template.php',
+        'Latte\\Sandbox\\SecurityPolicy' => __DIR__ . '/..' . '/latte/latte/src/Latte/Sandbox/SecurityPolicy.php',
+        'Latte\\SecurityViolationException' => __DIR__ . '/..' . '/latte/latte/src/Latte/exceptions.php',
         'Latte\\Strict' => __DIR__ . '/..' . '/latte/latte/src/Latte/Strict.php',
         'Latte\\Token' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Token.php',
         'Latte\\TokenIterator' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/TokenIterator.php',
@@ -270,6 +271,7 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Nette\\Mail\\DkimSigner' => __DIR__ . '/..' . '/nette/mail/src/Mail/DkimSigner.php',
         'Nette\\Mail\\FallbackMailer' => __DIR__ . '/..' . '/nette/mail/src/Mail/FallbackMailer.php',
         'Nette\\Mail\\FallbackMailerException' => __DIR__ . '/..' . '/nette/mail/src/Mail/exceptions.php',
+        'Nette\\Mail\\IMailer' => __DIR__ . '/..' . '/nette/mail/src/Mail/Mailer.php',
         'Nette\\Mail\\Mailer' => __DIR__ . '/..' . '/nette/mail/src/Mail/Mailer.php',
         'Nette\\Mail\\Message' => __DIR__ . '/..' . '/nette/mail/src/Mail/Message.php',
         'Nette\\Mail\\MimePart' => __DIR__ . '/..' . '/nette/mail/src/Mail/MimePart.php',
