@@ -1,6 +1,6 @@
 Film-downloader-Nette
 =================
-You can test this app on my web page [film.kubaandrysek.cz](http://film.kubaandrysek.cz) 
+
 
 
 Nette
